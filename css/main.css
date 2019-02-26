@@ -142,7 +142,7 @@ body header input:-ms-input-placeholder {
 
 body .popcat {
   background-image: url(../img/background.jpg);
-  padding-bottom: 4rem;
+  padding-bottom: 8rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -179,5 +179,38 @@ body .popcat a:hover {
   background-color: #BBDEFB;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+body .adv {
+  color: #FFFFFF;
+  background: url(../img/adv.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+body .adv:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#1976D2), color-stop(50%, #2196F3), to(#FFFFFF));
+  background-image: linear-gradient(left, #1976D2 0%, #2196F3 50%, #FFFFFF 100%);
+  opacity: .6;
+}
+
+body .adv .row {
+  padding: 3rem 0;
+}
+
+body .adv h6 {
+  margin: 1rem 0;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+body .adv p {
+  font-size: 0.7em;
 }
 /*# sourceMappingURL=main.css.map */
