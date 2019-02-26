@@ -8,6 +8,46 @@ body {
   color: #757575;
 }
 
+body .container {
+  padding: 0;
+}
+
+body .title {
+  overflow: hidden;
+  text-align: center;
+}
+
+body .title h4 {
+  font-weight: bold;
+  color: #757575;
+  margin: 2rem 0;
+  padding: 2rem;
+  font-size: 3rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body .title:before, body .title:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 22%;
+  height: 1rem;
+  background-color: #2196F3;
+  position: relative;
+  opacity: 0.5;
+}
+
+body .title:before {
+  margin-left: -100%;
+  left: 1.5rem;
+}
+
+body .title:after {
+  margin-right: -100%;
+  right: 1.5rem;
+}
+
 body .btn {
   border: 2px solid #2196F3;
   background-color: transparent;
@@ -98,5 +138,46 @@ body header input:-moz-input-placeholder {
 
 body header input:-ms-input-placeholder {
   color: #2196F3;
+}
+
+body .popcat {
+  background-image: url(../img/background.jpg);
+  padding-bottom: 4rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body .popcat a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body .popcat a p {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  color: #2196F3;
+  text-shadow: 0 0 3px #212121;
+  position: absolute;
+  font-size: 1.5em;
+  z-index: 100;
+  opacity: 0.7;
+}
+
+body .popcat a:hover {
+  background-color: #BBDEFB;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*# sourceMappingURL=main.css.map */

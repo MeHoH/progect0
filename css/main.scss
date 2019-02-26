@@ -15,6 +15,43 @@ body{
     font-size: 16px;
     background-color: $divider-color;
     color: $secondary-text-color;
+    //fix container
+    .container{
+        padding: 0;
+    }
+    //title
+    .title{
+        overflow: hidden;
+        text-align: center;
+        h4{
+            font-weight: bold;
+            color: $secondary-text-color;
+            margin: 2rem 0;
+            padding: 2rem;
+            font-size: 3rem;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &:before,
+        &:after{
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 22%;
+            height: 1rem;
+            background-color: $primary-color;
+            position: relative;
+            opacity: 0.5;
+        }
+        &:before{
+            margin-left: -100%;
+            left: 1.5rem;
+        }
+        &:after{
+            margin-right: -100%;
+            right: 1.5rem;
+        }
+    }
     //button
     .btn{
         border: 2px solid $primary-color;
@@ -95,6 +132,37 @@ body{
                 color: $primary-color;
             }
            
+        }
+    }
+    //Popular categories
+    .popcat{
+        background-image: url(../img/background.jpg);
+        padding-bottom: 4rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.5s;
+            p{
+                padding: 0;
+                margin: 0;
+                font-weight: bold;
+                color: $primary-color;
+                text-shadow: 0 0 3px $primary-text-color;
+                position: absolute;
+                font-size: 1.5em;
+                z-index: 100;
+                opacity:0.7;
+            }
+            &:hover{
+                background-color: $primary-color-light;
+                transform: scale(1.1);
+
+            }
         }
     }
 }
