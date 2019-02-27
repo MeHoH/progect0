@@ -14,7 +14,27 @@ $divider-color:        #BDBDBD;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+@mixin gradient-bg($color1, $color2, $color3){
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(left, $color1 0%, $color2 50%, $color3 100%);
+    opacity: .6;
+}
+@mixin input-color($placeholder-color){
+    &::-webkit-input-placeholder{
+        color: $placeholder-color;
+    }
+    &:-moz-input-placeholder{
+        color: $placeholder-color;
+    }
+    &:-ms-input-placeholder{
+        color: $placeholder-color;
+    }
+}
 html{
     font-size: 10px;
 }
@@ -140,17 +160,8 @@ body{
             border: 2px solid $primary-color;
             border-radius: 0.5rem;
             margin-top: 1.5rem;
-            margin-bottom: 1.5rem;
-            &::-webkit-input-placeholder{
-                color: $primary-color;
-            }
-            &:-moz-input-placeholder{
-                color: $primary-color;
-            }
-            &:-ms-input-placeholder{
-                color: $primary-color;
-            }
-           
+            margin-bottom: 1.5rem; 
+            @include input-color($primary-color);
         }
     }
     //Popular categories
@@ -187,14 +198,7 @@ body{
         @include background-img('../img/adv.jpg');
         position: relative;
         &:before{
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            background-image: linear-gradient(left, $primary-color-dark 0%, $primary-color 50%, $primary-color-text 100%);
-            opacity: .6;
+            @include gradient-bg($primary-color-dark, $primary-color, $primary-color-text );
         }
         .row{
             padding: 3rem 0;
@@ -219,6 +223,45 @@ body{
         }
         h6{
             font-size: 1em;
+        }
+    }
+    //place to order
+    .form_zamer{
+        position: relative;
+        @include background-img('../img/fiedback.png');
+        &:before{
+            @include gradient-bg($primary-color-dark, $primary-color, $primary-color-text );
+        }
+        .row{
+            padding: 3rem 0;
+        }
+        h5{
+            font-size: 1.2em;
+        }
+        h6{
+            font-size: 1em;
+        }
+        p{
+            font-size: 0.8em;
+        }
+        img{
+            margin-bottom: 1.5rem;
+            transition: all 0.5s;
+            &:hover{
+                transform: scale(1.2)
+            }
+        }
+        input{
+            width: 100%;
+            padding: 1rem;
+            background: transparent;
+            border: 2px solid $primary-color-text;
+            margin-bottom: 1rem;
+            @include input-color($primary-color-text);
+        }
+        button{
+            color: $primary-color-text;
+            padding: 1rem;
         }
     }
 }
