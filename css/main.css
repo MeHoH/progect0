@@ -382,6 +382,9 @@ body footer p span {
   body .popcat a p {
     font-size: 0.9em;
   }
+  body .form_zamer button {
+    margin-bottom: 1.5rem;
+  }
   body .popgoods .row {
     padding-bottom: 0;
   }
@@ -396,6 +399,16 @@ body footer p span {
     margin-bottom: 1.5rem;
   }
   body footer {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .title:before, body .title:after {
+    content: '';
+    display: none;
+  }
+  header p {
     font-size: 0.8em;
   }
 }

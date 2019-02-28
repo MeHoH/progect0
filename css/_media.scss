@@ -11,6 +11,11 @@
                 }
             }
         }
+        .form_zamer{
+            button{
+                margin-bottom: 1.5rem;
+            }
+        }
         .popgoods{
             .row{
                 .title{
@@ -27,6 +32,19 @@
             }
         }
         footer{
+            font-size: 0.8em;
+        }
+    }
+}
+@media screen and (max-width:768px){
+    body .title{
+        &:before, &:after{
+            content: '';
+            display: none;
+        }
+    }
+    header{
+        p{
             font-size: 0.8em;
         }
     }
