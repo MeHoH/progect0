@@ -215,8 +215,8 @@ body .adv:before {
   right: 0;
   left: 0;
   bottom: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(#1976D2), color-stop(50%, #2196F3), to(#FFFFFF));
-  background-image: linear-gradient(left, #1976D2 0%, #2196F3 50%, #FFFFFF 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#1976D2), color-stop(50%, #2196F3), to(#BBDEFB));
+  background-image: linear-gradient(left, #1976D2 0%, #2196F3 50%, #BBDEFB 100%);
   opacity: .6;
 }
 
@@ -323,5 +323,52 @@ body .form_zamer input:-ms-input-placeholder {
 body .form_zamer button {
   color: #FFFFFF;
   padding: 1rem;
+}
+
+body .reviews {
+  background-image: url("../img/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 3rem;
+}
+
+body .reviews .card {
+  height: 100%;
+}
+
+body .reviews .card h5 {
+  font-size: 1em;
+  color: #2196F3;
+}
+
+body .reviews .carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%233f51b5' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+body .reviews .carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%233f51b5' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+body footer {
+  border: 1px solid #212121;
+  color: #212121;
+  background: #FFFFFF;
+}
+
+body footer menu a.active {
+  color: #2196F3;
+}
+
+body footer menu a {
+  color: #212121;
+}
+
+body footer menu a:hover {
+  color: #2196F3;
+}
+
+body footer p span {
+  color: #2196F3;
 }
 /*# sourceMappingURL=main.css.map */
